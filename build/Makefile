@@ -2,7 +2,7 @@
 PROJECT_NAME := presslabs-build
 PROJECT_REPO := github.com/presslabs/build
 
-PLATFORMS = linux_amd64
+PLATFORMS = linux_amd64 linux_arm64
 
 # this is required, since by default, the makelib files are under a ./build path prefix, but here,
 # they are under root

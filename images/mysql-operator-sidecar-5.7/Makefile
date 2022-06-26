@@ -1,4 +1,4 @@
-PLATFORMS := linux_amd64
+PLATFORMS = linux_amd64 linux_arm64
 include ../../build/makelib/common.mk
 
 IMAGE ?= $(BUILD_REGISTRY)/mysql-operator-sidecar-5.7-$(ARCH)

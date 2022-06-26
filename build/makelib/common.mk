@@ -42,8 +42,8 @@ HOSTARCH := $(shell uname -m)
 ifeq ($(HOSTARCH),x86_64)
 HOSTARCH := amd64
 endif
-ifneq ($(HOSTARCH),amd64)
-	$(error build only supported on amd64 host currently)
+ifeq ($(HOSTARCH),aarch64)
+HOSTARCH := arm64
 endif
 HOST_PLATFORM := $(HOSTOS)_$(HOSTARCH)
 
@@ -121,7 +121,7 @@ DEBUG ?= 0
 
 # all supported platforms we build for this can be set to other platforms if desired
 # we use the golang os and arch names for convenience
-PLATFORMS ?= darwin_amd64 windows_amd64 linux_amd64 linux_arm64
+PLATFORMS ?= darwin_amd64 windows_amd64 linux_amd64 linux_arm64 darwin_arm64
 
 # Set the platform to build if not currently defined
 ifeq ($(origin PLATFORM),undefined)
