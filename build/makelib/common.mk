@@ -114,7 +114,7 @@ $(info ---- $(BLUE_BOLD)$(MAKECMDGOALS)$(CNone) $(VERBOSE_BUILD_INFO) )
 endif
 
 # Set DEBUG=1 to turn on a debug build
-DEBUG ?= 0
+DEBUG ?= 1
 
 # ====================================================================================
 # Platform and cross build options

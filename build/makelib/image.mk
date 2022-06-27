@@ -263,9 +263,9 @@ endif
 
 else # assume this .mk file is being included to build a single image
 
-ifeq ($(PLATFORM),darwin_amd64) # when building docker image on macOS pretend we are building for linux
-PLATFORM := linux_amd64
-endif
+# ifeq ($(PLATFORM),darwin_amd64) # when building docker image on macOS pretend we are building for linux
+# PLATFORM := linux_amd64
+# endif
 
 ifneq ($(filter $(PLATFORM),$(PLATFORMS)),)
 .build.artifacts.platform: img.build
